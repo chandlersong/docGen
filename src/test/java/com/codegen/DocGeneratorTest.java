@@ -26,6 +26,14 @@ public class DocGeneratorTest {
           (new DocGenerator(newFile,source)).writerToFile(50);
     }
 
+    @Test
+    public void testGenerator5(){
+
+        for(int i =0;i<5;i++) {
+            (new DocGenerator(new File(tempFolder, i+".docx"), new File("../TestCase"))).writerToFile(50);
+        }
+    }
+
 
     @Before
     public void setup(){
